@@ -3,193 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Code Blue Educação</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f9ff;
-      color: #1f2937;
-      line-height: 1.6;
+    html{
+      scroll-behavior:smooth;
     }
 
-    header {
-      min-height: 100vh;
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f5f9ff;
+      color:#1f2937;
+      line-height:1.6;
+    }
+
+    header{
+      min-height:100vh;
+
       background:
-        linear-gradient(rgba(2, 12, 27, 0.82), rgba(2, 12, 27, 0.82)),
-        url('https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
+      linear-gradient(rgba(2,12,27,0.82), rgba(2,12,27,0.82)),
+      url('https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1800&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      text-align:center;
+      padding:20px;
     }
 
-    .hero {
-      max-width: 900px;
-      color: white;
+    .hero{
+      max-width:900px;
+      color:white;
     }
 
-    .hero h1 {
-      font-size: 64px;
-      margin-bottom: 20px;
-      font-weight: 700;
+    .hero h1{
+      font-size:68px;
+      margin-bottom:20px;
+      font-weight:700;
     }
 
-    .hero p {
-      font-size: 22px;
-      margin-bottom: 35px;
-      color: #dbeafe;
+    .hero p{
+      font-size:22px;
+      color:#dbeafe;
+      margin-bottom:40px;
     }
 
-    .btn {
-      display: inline-block;
-      background: #0ea5e9;
-      color: white;
-      padding: 16px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-      box-shadow: 0 10px 25px rgba(14,165,233,0.3);
+    .btn{
+      display:inline-block;
+
+      background:#0ea5e9;
+      color:white;
+
+      padding:16px 30px;
+
+      border-radius:14px;
+
+      text-decoration:none;
+      font-weight:600;
+
+      transition:0.3s;
+
+      box-shadow:0 10px 25px rgba(14,165,233,0.3);
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background: #0284c7;
+    .btn:hover{
+      transform:translateY(-4px);
+      background:#0284c7;
     }
 
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 90px 20px;
+    section{
+      max-width:1250px;
+      margin:auto;
+      padding:90px 20px;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
     }
 
-    .section-title h2 {
-      font-size: 42px;
-      color: #0f172a;
-      margin-bottom: 15px;
+    .section-title h2{
+      font-size:44px;
+      margin-bottom:15px;
+      color:#0f172a;
     }
 
-    .section-title p {
-      color: #64748b;
-      max-width: 700px;
-      margin: auto;
+    .section-title p{
+      max-width:700px;
+      margin:auto;
+      color:#64748b;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+    .cards{
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
+      gap:28px;
     }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      border: 1px solid #e2e8f0;
+    .card{
+      background:white;
+
+      border-radius:22px;
+
+      overflow:hidden;
+
+      box-shadow:0 12px 35px rgba(0,0,0,0.08);
+
+      transition:0.3s;
+
+      border:1px solid #e2e8f0;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
+    .card:hover{
+      transform:translateY(-8px);
     }
 
-    .card h3 {
-      color: #0284c7;
-      margin-bottom: 15px;
-      font-size: 22px;
+    .card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
     }
 
-    .about {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
-      align-items: center;
+    .card-content{
+      padding:30px;
     }
 
-    .about img {
-      width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    .card h3{
+      color:#0284c7;
+      margin-bottom:14px;
+      font-size:24px;
     }
 
-    .about h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      color: #0f172a;
+    .card p{
+      color:#475569;
     }
 
-    .about p {
-      color: #475569;
-      margin-bottom: 18px;
+    .about{
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(320px,1fr));
+
+      gap:50px;
+
+      align-items:center;
     }
 
-    .contact {
-      background: linear-gradient(135deg,#0f172a,#0ea5e9);
-      border-radius: 28px;
-      padding: 70px 30px;
-      text-align: center;
-      color: white;
+    .about img{
+      width:100%;
+      border-radius:24px;
+
+      box-shadow:0 18px 40px rgba(0,0,0,0.15);
     }
 
-    .contact h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
+    .about h2{
+      font-size:44px;
+      margin-bottom:20px;
+      color:#0f172a;
     }
 
-    .contact p {
-      margin-bottom: 30px;
-      color: #dbeafe;
+    .about p{
+      color:#475569;
+      margin-bottom:18px;
     }
 
-    footer {
-      background: #020617;
-      color: #94a3b8;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 80px;
+    .contact{
+      background:
+      linear-gradient(135deg,#0f172a,#0ea5e9);
+
+      border-radius:30px;
+
+      padding:80px 30px;
+
+      text-align:center;
+
+      color:white;
+    }
+
+    .contact h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      color:#dbeafe;
+      margin-bottom:35px;
+    }
+
+    footer{
+      background:#020617;
+
+      color:#94a3b8;
+
+      text-align:center;
+
+      padding:35px 20px;
+
+      margin-top:70px;
     }
 
     @media(max-width:768px){
 
-      .hero h1 {
-        font-size: 42px;
+      .hero h1{
+        font-size:44px;
       }
 
-      .hero p {
-        font-size: 18px;
+      .hero p{
+        font-size:18px;
       }
 
       .section-title h2,
       .about h2,
-      .contact h2 {
-        font-size: 32px;
+      .contact h2{
+        font-size:34px;
+      }
+
+      .card img{
+        height:220px;
       }
 
     }
 
   </style>
+
 </head>
+
 <body>
 
   <header>
@@ -202,8 +260,13 @@
         Excelência em treinamentos médicos, emergências e capacitação profissional na área da saúde.
       </p>
 
-      <a class="btn" href="https://wa.me/5511998181978" target="_blank">
+      <a
+        class="btn"
+        href="https://wa.me/5511998181978"
+        target="_blank">
+
         Fale no WhatsApp
+
       </a>
 
     </div>
@@ -211,59 +274,140 @@
   </header>
 
 
+
   <section>
 
     <div class="section-title">
+
       <h2>Nossos Cursos</h2>
 
       <p>
         Capacitações modernas e práticas para profissionais da saúde e empresas.
       </p>
+
     </div>
+
 
 
     <div class="cards">
 
-      <div class="card">
-        <h3>PCR Básico</h3>
-        <p>
-          Treinamento completo para reconhecimento e atendimento inicial em parada cardiorrespiratória.
-        </p>
-      </div>
 
       <div class="card">
-        <h3>PCR Avançado</h3>
-        <p>
-          Capacitação avançada com foco em emergências críticas e protocolos atualizados.
-        </p>
+
+        <img
+          src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?q=80&w=1200&auto=format&fit=crop"
+          alt="PCR Básico">
+
+        <div class="card-content">
+
+          <h3>PCR Básico</h3>
+
+          <p>
+            Treinamento completo para reconhecimento e atendimento inicial em parada cardiorrespiratória.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>BLS (AHA)</h3>
-        <p>
-          Suporte Básico de Vida com metodologia alinhada aos padrões internacionais.
-        </p>
-      </div>
+
 
       <div class="card">
-        <h3>ACLS (AHA)</h3>
-        <p>
-          Atendimento avançado cardiovascular em emergências clínicas e hospitalares.
-        </p>
+
+        <img
+          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop"
+          alt="PCR Avançado">
+
+        <div class="card-content">
+
+          <h3>PCR Avançado</h3>
+
+          <p>
+            Capacitação avançada com foco em emergências críticas e protocolos atualizados.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Trauma</h3>
-        <p>
-          Condutas práticas e abordagem sistematizada no atendimento ao trauma.
-        </p>
-      </div>
+
 
       <div class="card">
-        <h3>USG POCUS</h3>
-        <p>
-          Ultrassonografia Point Of Care aplicada à tomada rápida de decisão clínica.
-        </p>
+
+        <img
+          src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop"
+          alt="BLS">
+
+        <div class="card-content">
+
+          <h3>BLS (AHA)</h3>
+
+          <p>
+            Suporte Básico de Vida com metodologia alinhada aos padrões internacionais.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=1200&auto=format&fit=crop"
+          alt="ACLS">
+
+        <div class="card-content">
+
+          <h3>ACLS (AHA)</h3>
+
+          <p>
+            Atendimento avançado cardiovascular em emergências clínicas e hospitalares.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1200&auto=format&fit=crop"
+          alt="Trauma">
+
+        <div class="card-content">
+
+          <h3>Trauma</h3>
+
+          <p>
+            Condutas práticas e abordagem sistematizada no atendimento ao trauma.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?q=80&w=1200&auto=format&fit=crop"
+          alt="USG POCUS">
+
+        <div class="card-content">
+
+          <h3>USG POCUS</h3>
+
+          <p>
+            Ultrassonografia Point Of Care aplicada à tomada rápida de decisão clínica.
+          </p>
+
+        </div>
+
       </div>
 
     </div>
@@ -271,11 +415,14 @@
   </section>
 
 
+
   <section>
 
     <div class="about">
 
-      <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop" alt="Equipe médica" />
+      <img
+        src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop"
+        alt="Equipe médica">
 
       <div>
 
@@ -300,6 +447,7 @@
   </section>
 
 
+
   <section>
 
     <div class="contact">
@@ -310,13 +458,19 @@
         Solicite informações, treinamentos in company ou inscrições para os próximos cursos.
       </p>
 
-      <a class="btn" href="https://wa.me/5511998181978" target="_blank">
+      <a
+        class="btn"
+        href="https://wa.me/5511998181978"
+        target="_blank">
+
         WhatsApp: (11) 99818-1978
+
       </a>
 
     </div>
 
   </section>
+
 
 
   <footer>
@@ -327,14 +481,3 @@
 
 </body>
 </html>
-```
-
-# Como atualizar no GitHub
-
-1. Abra o arquivo `index.html`
-2. Clique no ícone de lápis (editar)
-3. Apague tudo
-4. Cole o novo código
-5. Clique em `Confirmar alterações`
-6. Clique novamente em `Confirmar alterações`
-7. Atualize seu site
